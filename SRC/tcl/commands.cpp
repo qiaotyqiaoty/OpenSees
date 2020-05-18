@@ -4626,13 +4626,13 @@ specifyIntegrator(ClientData clientData, Tcl_Interp *interp, int argc,
       theTransientAnalysis->setIntegrator(*theTransientIntegrator);
   }
   
-  else if (strcmp(argv[1],"GimmeMCK") == 0 || strcmp(argv[1],"ZZTop") == 0) {
-    theTransientIntegrator = (TransientIntegrator*)OPS_GimmeMCK();
+//  else if (strcmp(argv[1],"GimmeMCK") == 0 || strcmp(argv[1],"ZZTop") == 0) {
+//    theTransientIntegrator = (TransientIntegrator*)OPS_GimmeMCK();
     
     // if the analysis exists - we want to change the Integrator
-    if (theTransientAnalysis != 0)
-      theTransientAnalysis->setIntegrator(*theTransientIntegrator);
-  }
+//    if (theTransientAnalysis != 0)
+//      theTransientAnalysis->setIntegrator(*theTransientIntegrator);
+//  }
   
   else if (strcmp(argv[1],"PFEM") == 0) {
     theTransientIntegrator = new PFEMIntegrator();
